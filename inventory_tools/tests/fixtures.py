@@ -74,24 +74,50 @@ suppliers = [
 	),
 ]
 
+# workstations = [
+# 	("Mix Pie Crust Station", "20"),
+# 	("Roll Pie Crust Station", "20"),
+# 	("Make Pie Filling Station", "20"),
+# 	("Cooling Station", "100"),
+# 	("Box Pie Station", "100"),
+# 	("Baking Station", "20"),
+# 	("Assemble Pie Station", "20"),
+# 	("Mix Pie Filling Station", "20"),
+# 	("Packaging Station", "2"),
+# 	("Food Prep Table 2", "10"),
+# 	("Food Prep Table 1", "5"),
+# 	("Range Station", "20"),
+# 	("Cooling Racks Station", "80"),
+# 	("Refrigerator Station", "200"),
+# 	("Oven Station", "20"),
+# 	("Mixer Station", "10"),
+# ]
+
 workstations = [
-	("Mix Pie Crust Station", "20"),
-	("Roll Pie Crust Station", "20"),
-	("Make Pie Filling Station", "20"),
-	("Cooling Station", "100"),
-	("Box Pie Station", "100"),
-	("Baking Station", "20"),
-	("Assemble Pie Station", "20"),
-	("Mix Pie Filling Station", "20"),
-	("Packaging Station", "2"),
-	("Food Prep Table 2", "10"),
-	("Food Prep Table 1", "5"),
-	("Range Station", "20"),
-	("Cooling Racks Station", "80"),
-	("Refrigerator Station", "200"),
-	("Oven Station", "20"),
-	("Mixer Station", "10"),
+    {"workstation_name": "Mix Pie Crust Station", "production_capacity": "20", "shift_types": ["Day Shift", "Evening Shift"]},
+    {"workstation_name": "Roll Pie Crust Station", "production_capacity": "20", "shift_types": ["Day Shift"]},
+    {"workstation_name": "Make Pie Filling Station", "production_capacity": "20", "shift_types": ["Day Shift"]},
+    {"workstation_name": "Cooling Station", "production_capacity": "100", "shift_types": ["Day Shift", "Evening Shift"]},
+    {"workstation_name": "Box Pie Station", "production_capacity": "100", "shift_types": ["Day Shift"]},
+    {"workstation_name": "Baking Station", "production_capacity": "20", "shift_types": ["Day Shift", "Evening Shift"]},
+    {"workstation_name": "Assemble Pie Station", "production_capacity": "20", "shift_types": ["Day Shift"]},
+    {"workstation_name": "Mix Pie Filling Station", "production_capacity": "20", "shift_types": ["Day Shift"]},
+    {"workstation_name": "Packaging Station", "production_capacity": "2", "shift_types": ["Day Shift"]},
+    {"workstation_name": "Food Prep Table 2", "production_capacity": "10", "shift_types": ["Day Shift"]},
+    {"workstation_name": "Food Prep Table 1", "production_capacity": "5", "shift_types": ["Day Shift", "Evening Shift"]},
+    {"workstation_name": "Range Station", "production_capacity": "20", "shift_types": ["Day Shift"]},
+    {"workstation_name": "Cooling Racks Station", "production_capacity": "80", "shift_types": ["Day Shift"]},
+    {"workstation_name": "Refrigerator Station", "production_capacity": "200", "shift_types": ["Day Shift"]},
+    {"workstation_name": "Oven Station", "production_capacity": "20", "shift_types": ["Day Shift", "Evening Shift"]},
+    {"workstation_name": "Mixer Station", "production_capacity": "10", "shift_types": ["Day Shift"]}
 ]
+
+shifts = [
+    {"name": "Day Shift", "start_time": "06:00:00", "end_time": "14:00:00", "color": "Yellow"},
+    {"name": "Evening Shift", "start_time": "14:00:00", "end_time": "22:00:00", "color": "Blue"},
+    {"name": "Night Shift", "start_time": "22:00:00", "end_time": "06:00:00", "color": "Violet"}
+]
+
 
 operations = [
 	(
@@ -1177,4 +1203,82 @@ attributes = {
 	"Cloudberry": {
 		"Color": ["Yellow", "Red"],
 	},
+}
+
+planned_dates = {
+    "Ambrosia Pie": {
+        "planned_start_date": "11-01",
+        "planned_end_date": "11-05",
+        "expected_delivery_date": "11-07",
+    },
+    "Double Plum Pie": {
+        "planned_start_date": "11-03",
+        "planned_end_date": "11-08",
+        "expected_delivery_date": "11-10",
+    },
+    "Gooseberry Pie": {
+        "planned_start_date": "11-02",
+        "planned_end_date": "11-06",
+        "expected_delivery_date": "11-09",
+    },
+    "Kaduka Key Lime Pie": {
+        "planned_start_date": "11-04",
+        "planned_end_date": "11-09",
+        "expected_delivery_date": "11-12",
+    },
+    "Pocketful of Bay": {
+        "planned_start_date": "11-14",
+        "planned_end_date": "11-28",
+        "expected_delivery_date": "12-01",
+    },
+    "Tower of Bay-bel": {
+        "planned_start_date": "11-15",
+        "planned_end_date": "11-29",
+        "expected_delivery_date": "12-02",
+    },
+    "Pie Crust": {
+        "planned_start_date": "11-16",
+        "planned_end_date": "11-30",
+        "expected_delivery_date": "12-03",
+    },
+    "Ambrosia Pie Filling": {
+        "planned_start_date": "11-17",
+        "planned_end_date": "12-01",
+        "expected_delivery_date": "12-04",
+    },
+    "Kaduka Key Lime Pie Filling": {
+        "planned_start_date": "11-18",
+        "planned_end_date": "12-02",
+        "expected_delivery_date": "12-05",
+    },
+    "Gooseberry Pie Filling": {
+        "planned_start_date": "11-19",
+        "planned_end_date": "12-03",
+        "expected_delivery_date": "12-06",
+    },
+    "Bayberry Pocket": {
+        "planned_start_date": "11-20",
+        "planned_end_date": "12-04",
+        "expected_delivery_date": "12-07",
+    },
+    "Bayberry Popper": {
+        "planned_start_date": "11-21",
+        "planned_end_date": "12-05",
+        "expected_delivery_date": "12-08",
+    },
+    "Bayberry Pie": {
+        "planned_start_date": "11-22",
+        "planned_end_date": "12-06",
+        "expected_delivery_date": "12-09",
+    },
+    "Bayberry Pie Filling": {
+        "planned_start_date": "11-23",
+        "planned_end_date": "12-07",
+        "expected_delivery_date": "12-10",
+    },
+    "Double Plum Pie Filling": {
+        "planned_start_date": "11-24",
+        "planned_end_date": "12-08",
+        "expected_delivery_date": "12-11",
+    },
 }
